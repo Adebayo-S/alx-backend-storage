@@ -9,12 +9,16 @@
 * **0. List all databases**
   * [0-list_databases](./0-list_databases): Write a script that lists all databases in MongoDB.
 
+&NewLine;
+
   ```bash
   cat 0-list_databases | mongo
   ```
 
 * **1. Create a database**
   * [1-use_or_create_database](./1-use_or_create_database): Write a script that creates or uses the database `my_db`
+
+&NewLine;
 
   ```bash
   cat 0-list_databases | mongo
@@ -27,6 +31,8 @@
     * The document must have one attribute `name` with value “Holberton school”
     * The database name will be passed as option of `mongo` command
 
+&NewLine;
+
   ```bash
   cat 2-insert | mongo my_db
   ```
@@ -35,6 +41,8 @@
   * [3-all](./3-all): Write a script that lists all documents in the collection `school`
 
     * The database name will be passed as option of `mongo` command
+
+&NewLine;
 
   ```bash
   cat 3-all | mongo my_db
@@ -45,6 +53,8 @@
 
     * The database name will be passed as option of `mongo` command
 
+&NewLine;
+
   ```bash
   cat 4-match | mongo my_db
   ```
@@ -53,6 +63,8 @@
   * [5-count](./5-count): Script that displays the number of documents in the collection `school`
 
     * The database name will be passed as option of `mongo` command
+
+&NewLine;
 
   ```bash
   cat 5-count | mongo my_db
@@ -65,6 +77,8 @@
     * The update should add the attribute `address` with the value “972 Mission street”
     * The database name will be passed as option of `mongo` command
 
+&NewLine;
+
   ```bash
   cat 6-update | mongo my_db
   cat 4-match | mongo my_db
@@ -74,6 +88,8 @@
   * [7-delete](./7-delete): Write a script that deletes all documents with `name="Holberton school"` in the collection `school`
 
     * The database name will be passed as option of `mongo` command
+
+&NewLine;
 
   ```bash
   cat 7-delete | mongo my_db
@@ -87,6 +103,8 @@
     * Return an empty list if no document in the collection
     * `mongo_collection` will be the `pymongo` collection object
 
+&NewLine;
+
   ```bash
   ./8-main.py
   ```
@@ -97,6 +115,8 @@
     * Prototype: `def insert_school(mongo_collection, **kwargs):`
     * `mongo_collection` will be the `pymongo` collection object
     * Returns the `new _id`
+
+&NewLine;
 
   ```bash
   ./9-main.py
@@ -110,6 +130,8 @@
     * `name` (string) will be the school name to update
     * `topics` (list of strings) will be the list of topics approached in the school
 
+&NewLine;
+
   ```bash
   ./10-main.py
   ```
@@ -120,6 +142,8 @@
     * Prototype: `def schools_by_topic(mongo_collection, topic):`
     * `mongo_collection` will be the `pymongo` collection object
     * `topic` (string) will be topic searched
+
+&NewLine;
 
   ```bash
   ./11-main.py
@@ -185,6 +209,8 @@
 
     * The database name will be passed as option of `mongo` command
 
+&NewLine;
+
   ```bash
   cat 100-find | mongo my_db
   ```
@@ -197,6 +223,8 @@
     * The top must be ordered
     * The average score must be part of each item returns with key = `averageScore`
 
+&NewLine;
+
   ```bash
   ./101-main.py
   ```
@@ -205,6 +233,8 @@
   * [12-log_stats.py](./12-log_stats.py): Improve `12-log_stats.py` by adding the top 10 of the most present IPs in the collection `nginx` of the database `logs`:
 
     * The IPs top must be sorted (like the example below)
+
+&NewLine;
 
   ```bash
   ./102-log_stats.py
