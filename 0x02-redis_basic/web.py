@@ -4,6 +4,7 @@ import requests
 import redis
 from functools import wraps
 from typing import Callable
+import functools
 
 
 _redis = redis.Redis()
@@ -34,3 +35,11 @@ def get_page(url: str) -> str:
     """Obtain HTML content through URL"""
     res = requests.get(url)
     return res.text
+
+# Use functools.lru_cache to cache with expiration time of 10 seconds
+get_page = functools.lru_cache(maxsize=1, typed=False, timeout=10)(get_page)
+
+url = "http://slowwly.robertomurray.co.uk/delay/3000/url/http://www.example.com"
+print(get_page(url))
+print(get_page(url))
+print(get_page(url))
