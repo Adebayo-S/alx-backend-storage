@@ -1,5 +1,7 @@
 # 0x02. Redis basic
 
+![image](https://user-images.githubusercontent.com/62617476/223486077-4c0423fb-edad-4048-b52d-b6f8daafb132.png)
+
 ## Resources
 
 [redis commands](https://redis.io/commands/)
